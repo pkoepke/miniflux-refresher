@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="A cool thing made with Glitch" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>URL saver and server in Node, Express, and SQLite3</title>
+  </head>
+  <body>
+    <div class="everythingDiv">
+      <header>
+        <h1>URL saver and server in Node, Express, and SQLite3</h1>
+      </header>
+
+      <main>
+        <div class="buttonsDiv">
+          <input
+            type="button"
+            value="Store your IP address"
+            id="storeIpButton"
+            onclick="storeIp(writeResponseToPage)"
+          />
+          <input
+            type="button"
+            value="Show the last 10 IP addresses"
+            id="showLastTenAddressesButton"
+            onclick="showLastTenAddresses(writeResponseToPage)"
+          />
+          <input
+            type="button"
+            value="Show all stored IP addresses"
+            id="showAllAddressesButton"
+            onclick="showAllAddresses(writeResponseToPage)"
+          />
+          <input
+            type="button"
+            value="Convert timezones all at once"
+            id="convertAllTimeZonesButton"
+            onclick="convertTimeZoneAllAtOnce()"
+          />
+          <input
+            type="button"
+            value="Convert timezones one by one"
+            id="convertTimeZoneOneByOneButton"
+            onclick="convertTimeZoneOneByOne()"
+          />
+          <input
+            disabled
+            type="button"
+            value="Get notifications when an IP is logged"
+            id="getNotifications"
+            onclick=""
+          />
+        </div>
+        <div id="loadingSpinnerDiv" class="loadingSpinnerDiv">
+          <img
+            id="loadingSpinnerImg"
+            src="https://cdn.glitch.com/1dfaea6a-e65e-49f4-8703-f550387a91b6%2Floading_spinner.gif?1493145152988"
+          />
+        </div>
+        <div id="outputDiv" class="outputDiv"></div>
+      </main>
+
+      <footer>
+        <a href="https://glitch.com"> Remix this in Glitch </a>
+      </footer>
+    </div>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="/client.js"></script>
+    <script src="./notifications.js"></script>
+  </body>
+</html>

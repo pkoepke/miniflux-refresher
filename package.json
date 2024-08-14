@@ -1,0 +1,26 @@
+{
+  "name": "miniflux-refreshet",
+  "version": "0.0.1",
+  "description": "Refreshes Miniflux feeds periodically",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cookie-parser": "*",
+    "express": "*",
+    "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "url": "https://github.com/pkoepke/ip-buttonpusher-node-sqlite-express"
+  },
+  "license": "none",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}

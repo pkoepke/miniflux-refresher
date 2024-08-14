@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "noto sans", helvetica, arial, sans-serif;
+  margin: 25px;
+  margin: 1.5rem auto 1.5rem auto;
+  max-width: 70rem;
+}
+
+.everythingDiv {
+  max-width: 55rem;
+  width: 95%;
+  margin: 0 auto 0 auto;
+}
+
+h1 {
+  font-weight: bold;
+  color: blue;
+  max-width: 46rem;
+  margin: 0 auto 0 auto;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+main {
+  margin: 1rem auto 0 auto;
+}
+
+.buttonsDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+input {
+  /*display: inline-block;*/
+  margin: 0.3rem;
+  padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+  width: 20rem;
+  min-width: 20rem;
+  max-width: 49%;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+button {
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: lightgrey;
+  border: 1px solid grey;
+  box-shadow: 2px 2px teal;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: yellow;
+}
+
+button:active {
+  box-shadow: none;
+}
+
+.loadingSpinnerDiv {
+  width: 1rem;
+  margin: 0 auto 0 auto;
+}
+
+.outputDiv {
+  width: 21rem;
+  margin: 0 auto 0 auto;
+}
+
+.entriesDiv {
+}
+
+.url {
+  max-width: 220px;
+  margin: 0.6rem auto 0.6rem auto;
+}
+
+.timestamp {
+  float: right;
+}
+
+/*table {
+  border-spacing: 20px 0;
+}*/
+
+footer {
+  margin: 0 auto 0 auto;
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid lightgrey;
+  max-width: 800px;
+}
+
+footer > a {
+  color: #bbbbbb;
+}
+
+.nicejob {
+  text-decoration: line-through;
+}

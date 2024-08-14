@@ -31,7 +31,7 @@ const refreshFeeds = async () => {
             });
             console.log(res);
           }
-        }, 60000 * index); // Make a call every 60 seconds - every 30 occasionnaly triggered 'too many requests' errors.
+        }, 60000 * index); // Make a call every 60 seconds - every 30 seconds occasionnaly triggered 'too many requests' errors.
     } else console.log(`It's been less than 24 hours, do nothing.`);
   }
 }

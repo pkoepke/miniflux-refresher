@@ -13,7 +13,6 @@ const rateLimit = 43200000; // Only refresh twice per day. 43200000 miliseconds 
 const refreshFeeds = async () => {
   let req = await fetch('https://reader.miniflux.app/v1/feeds', { headers: { 'X-Auth-Token': apiKey } });
   let res = JSON.parse(await req.text());
-  console.log(res);
   let feedsArray = res.map(currentFeed => currentFeed);
   feedsArray.sort((a, b) => { return (new Date(a.checked_at) - new Date(b.checked_at)) }); // Sort from least recently checked to most recently checked so least recent gets refreshed first.
   for (let [index, feed] of feedsArray.entries()) {
@@ -32,7 +31,7 @@ const refreshFeeds = async () => {
             });
             console.log(res);
           }
-        }, 30000 * index); // Make a call every 30 seconds.}
+        }, 60000 * index); // Make a call every 60 seconds - every 30 occasionnaly triggered 'too many requests' errors.
     } else console.log(`It's been less than 24 hours, do nothing.`);
   }
 }
